@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* Base
+-------------------------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.4rem;
+  font-family: "游ゴシック", Yugothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #f9eece; }
+
+a {
+  color: #3ea737;
+  text-decoration: none; }
+  a:visited {
+    color: #30812a; }
+  a:hover {
+    color: #30812a; }
+  a:active {
+    color: #45ba3d; }
+
+/* Align
+-------------------------------------------------------------------------------*/
+.text-center, #contents h2, #contents .content-box h2, #contents .content-box p, footer h2, footer a {
+  text-align: center; }
+
+/* Layout
+-------------------------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Header
+-------------------------------------------------------------------------------*/
+header .coverphoto {
+  background-image: url("../images/books.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+@media (min-width: 768px) {
+  header .coverphoto {
+    background-image: url("../images/books.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center; } }
+/* Main
+-------------------------------------------------------------------------------*/
+#contents h2 {
+  font-size: 1.6rem;
+  margin-top: 30px; }
+#contents .container {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+#contents .content-box {
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 30px 20px 0; }
+  #contents .content-box h2 {
+    margin-top: 0px;
+    padding: 20px 0;
+    background-color: #dccd89; }
+  #contents .content-box p {
+    background-color: #d8d7cd;
+    padding: 50px 20px; }
+
+@media (min-width: 768px) {
+  #contents .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: row;
+    flex-direction: row; } }
+/* Footer
+-------------------------------------------------------------------------------*/
+footer {
+  height: 80px;
+  background-color: #dccd89;
+  margin-top: 50px; }
+  footer h2 {
+    padding-top: 10px; }
+  footer a {
+    background-color: #d8d7cd;
+    display: block;
+    margin: 10px 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+
+@media (min-width: 768px) {
+  footer a {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px; } }
+
+/*# sourceMappingURL=style.css.map */

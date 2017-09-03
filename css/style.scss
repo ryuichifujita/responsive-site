@@ -1,0 +1,134 @@
+@import "compass";
+// font-family
+$baseFontFamily :"游ゴシック", Yugothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$basecolor: #f9eece;
+$subcolor: #d8d7cd;
+$keycolor: #dccd89;
+$accentcolor: #3ea737;
+
+/* Base
+-------------------------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+    font-size: 1.4rem;
+    font-family: $baseFontFamily;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    background-color: $basecolor;
+}
+
+a {
+    @include link-colors($accentcolor, darken($accentcolor, 10%), lighten($accentcolor, 5%), darken($accentcolor, 10%));
+    text-decoration: none;
+}
+
+/* Align
+-------------------------------------------------------------------------------*/
+.text-center{
+    text-align: center;
+}
+
+/* Layout
+-------------------------------------------------------------------------------*/
+.block-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header
+-------------------------------------------------------------------------------*/
+header {
+    .coverphoto {
+        background-image: url("../images/books.jpg");
+        height: 250px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+// desktop
+@media (min-width: 768px) {
+    header {
+        .coverphoto {
+            background-image: url("../images/books.jpg");
+            height: 500px;
+            width: 100%;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+}
+
+/* Main
+-------------------------------------------------------------------------------*/
+#contents {
+    h2 {
+        font-size: 1.6rem;
+        @extend .text-center;
+        margin-top: 30px;
+    }
+    .container {
+        @include display-flex;
+        justify-content: space-between;
+        @include flex-direction(column);//    ボックスを縦に並べる
+    }
+    .content-box {
+        @include flex(1);
+        margin: 30px 20px 0;
+        h2 {
+            margin-top: 0px;
+            padding: 20px 0;
+            background-color: $keycolor;
+            @extend .text-center;
+        }
+        p {
+            background-color: $subcolor;
+            padding: 50px 20px;
+            @extend .text-center;
+        }
+    }
+}
+// desktop
+@media (min-width: 768px) {
+    #contents {
+        .container {
+        @include display-flex;
+        justify-content: space-between;
+        @include flex-direction(row);//    ボックスを横に並べる
+        }
+    }
+}
+
+/* Footer
+-------------------------------------------------------------------------------*/
+footer {    
+    height: 80px;
+    background-color: $keycolor;
+    margin-top: 50px;
+    h2 {
+        padding-top: 10px;
+        @extend .text-center;
+    }
+    a {
+        @extend .text-center;
+        background-color: $subcolor;
+        display: block;
+        margin: 10px 20px;
+        @include border-radius(4px);
+    }
+}
+
+// desktop
+@media (min-width: 768px) {
+    footer {
+        a {
+            display: block;
+            margin: 10px auto;
+            max-width: 200px;
+        }
+    }
+}
